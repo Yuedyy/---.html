@@ -1,0 +1,164 @@
+#container{
+  margin-top:20%;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  width: 800px;
+  height:600px;
+  margin: auto;
+  background-color:#D8BFD8;
+  
+}
+#header{
+  line-height: 78px;
+  font-family: '华文琥珀';
+  width: 100%;
+  height:13%;
+  font-size: 60px;
+  font-weight: 900;
+  color:white;
+}
+#footer{
+  height: 10%;
+  margin:auto;
+  color:gray;
+  line-height: 60px;
+}
+#main{
+  height: 77%;
+  width: 300%;
+  background-color: transparent;
+  position: relative;
+}
+ul {
+  list-style:none;
+}
+
+#wrap {
+  position: relative;
+  width:700px;
+  height:100%;
+  border:1px solid #9cc5ef;
+  margin-left: 50px;
+  overflow:hidden;
+   border:1px solid transparent;
+  border-radius: 40px;
+}
+
+#slider {
+  width:300%;
+  height:100%;
+  font:100px/400px Microsoft Yahei;
+  text-align:center;
+  color:#fff;
+  margin-left:0;
+  -webkit-animation:slide1 3s ease-out infinite;
+}
+
+#slider li {
+  float:left;
+  width:700px;
+  height:100%;
+}
+img.image{
+  width: 700px;
+  height: 100%;
+
+}
+p[name = "daodao"]{
+  width: 152px;
+  height: 152px;
+  position: absolute;
+  left:670px;
+  bottom:-65px;
+  float: right;
+}
+img[name = "daodao"]{
+  border:1px solid transparent;
+  border-radius: 80px;
+}
+
+
+/*创建三种动画策略*/
+@-webkit-keyframes slide1 {
+  0% { margin-left:0;}
+  23% { margin-left:0;}
+  33% { margin-left:-700px;}
+  56% { margin-left:-700px;}
+  66% { margin-left:-1400px;}
+  90% { margin-left:-1400px;}
+  100% {margin-left:0;}
+}
+
+@-webkit-keyframes slide2 {
+  0% { margin-left:-700px;}
+  23% { margin-left:-700px;}
+  33% { margin-left:-1400px;}
+  56% { margin-left:-1400px;}
+  66% { margin-left:0;}
+  90% { margin-left:0;}
+  100% {margin-left:-600px;}
+}
+
+@-webkit-keyframes slide3 {
+  0% { margin-left:-1400px;}
+  23% { margin-left:-1400px;}
+  33% { margin-left:0;}
+  56% { margin-left:0;}
+  66% { margin-left:-700px;}
+  90% { margin-left:-700px;}
+  100% {margin-left:-1400px;}
+}
+
+
+/*修改动画名称*/
+#l01:checked ~ #wrap #slider {
+  -webkit-animation-name:slide1;
+}
+
+#l02:checked ~ #wrap #slider {
+  -webkit-animation-name:slide2;
+}
+
+#l03:checked ~ #wrap #slider {
+  -webkit-animation-name:slide3;
+}
+
+
+/*短暂地取消动画名称，模拟重启动画*/
+
+
+#opts {
+
+  position:relative;
+  left:60px;
+  bottom:50px;
+  margin-bottom: 10px;
+  width: 200px;
+  height:40px;
+  border:1px solid transparent;
+  border-radius: 40px;
+  text-align: center;
+  font:30px "华文琥珀";
+}
+
+#opts label {
+   float: left;
+  width: 30px;
+  height: 30px;
+  background-color: #FFAEB9;
+  cursor:pointer;
+  display: inline;
+  margin: 10px;
+  border:1px solid transparent;
+  border-radius: 20px;
+}
+
+#opts label:hover {
+  background:#8B636C;
+}
+
+/* 隐藏Input按钮*/
+#l01, #l02, #l03 {
+  display:none;
+}
+
